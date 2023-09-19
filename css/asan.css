@@ -1,0 +1,175 @@
+@charset "UTF-8";
+body { min-width:340px; width: 100%; height: 100%;  }
+
+/* 레이아웃, 배경색 */
+#controlbody { overflow: hidden;  }
+#wrap { position: relative;  }
+
+header { height:45px; background: white }
+
+#con_wrap { 
+  overflow: auto;
+  display: flex;
+  flex-direction: column; row-gap: 6px;
+  height:calc(100vh - 174px);
+  padding:6px; 
+}
+#con_up { 
+  flex:2; display: flex; 
+  column-gap: 6px; 
+}
+
+.s1-1 { 
+  flex:1;  
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background-size: cover;
+  
+}
+
+.con_up_right {  
+  flex:1; 
+  display: flex; 
+  flex-direction: column ; 
+  row-gap: 6px;
+  
+}
+
+.s1-2 { flex:1; }
+.s1-3 { flex:1; }
+  
+#con_down, #con_down2, #con_down3 { 
+  flex:1;
+  display: flex;
+  column-gap: 6px;
+  
+}
+
+.s2-1 { flex:1; }
+.s2-2 { flex:1; }
+.s3-1 { flex:1; }
+.s3-2 { flex:1; }
+.s4-1 { flex:1; }
+
+    
+footer { background: #222222; }
+
+/* 헤더 */
+header { }
+  .lnb_btn { 
+    float: left; position: relative;  
+    z-index:20; 
+  }
+  .logo { 
+    float: left; width:100%; 
+    margin:0 -45px; text-align: center; 
+  }
+  .search_btn { float: right; }
+
+header img { height:45px; }
+
+/* 컨텐츠 */
+  #con_wrap {  }
+  #con_up {}
+  #con_down {}
+  .slider { float: left;;}
+
+  section { display: table; }
+
+  section a {  
+    display: table-cell; 
+    text-align: center;
+    vertical-align: middle; 
+  }
+  section img { width: 100%; }
+  .s1-1 img { }
+  .s1-2 img { }
+  .s1-3 img { }
+  .s2-1 img { }
+  .s2-2 img { }
+  .s3-1 img { }
+  .s3-2 img { }
+  .s4-1 img { }
+
+/* 푸터 */
+footer { padding:15px 6px; color: white; }
+  ul.quickmenu { display:table; width:100%; color: black;}
+  .quickmenu li { 
+    display:table-cell; 
+    width:25%; 
+    background: #F7F7F7; 
+    border-right: 1px solid #E5E5E5; 
+    border-left: 1px solid white; 
+  }
+  .quickmenu li:first-child { border-left: none;}
+  .quickmenu li:first-child { border-right: none;}
+  .quickmenu a { 
+    display: block; 
+    text-align: center; 
+    line-height: 33px; 
+    font-size: 12px; 
+  }
+  .telsns { margin-top: 15px; }
+  .telsns a { font-size: 22px; }
+  .telsns img { 
+    width: 24px; 
+    margin-left: 5px; 
+    vertical-align: bottom;
+  }
+  .pc { 
+    position: absolute; 
+    right:6px; 
+    margin-top: -25px; 
+    text-align: right;
+  }
+  .pc a { 
+    display: inline-block; 
+    padding: 4px 6px;
+    background: #222222; 
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  .copy { font-size: 10px; margin-top: 15px; }
+
+  /* 좌측 슬라이더 메뉴 lnb */
+  #lnb { 
+    position: fixed; top: 0; left: -274px;
+    width: 274px; height: 100%;
+    z-index: 100; background: #f1f1f1;
+    
+    }
+
+  .lnb_login {
+    background: #111; color: white;
+    padding: 35px 20px;
+    
+    }
+
+  .lnb_login p { 
+    font-size: 14px; 
+    line-height: 1.4; 
+    margin-bottom: 20px; 
+    
+    }
+
+  .lnb_login img { width: 232px;  }
+
+  .lnb_list { border-bottom: 1px solid #ddd; font-size: 32px; text-align: center;  }
+
+  .lnb_list a {
+    display: block; 
+    margin-top: 40px; 
+    margin-bottom: 40px; 
+    
+  }
+  .lnb_list img { width:274px;  }
+
+  .lnb_res  { margin-top: 40px;  text-align: center;}
+  .lnb_res img  { width:235px; }
+
+  .cover { 
+    display: none;
+    position: fixed; top: 0; right: 0; bottom: 0; 
+    background: rgba(0,0,0,0.7);
+  }
