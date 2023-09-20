@@ -11,7 +11,7 @@ header { height:45px; background: white }
   overflow: auto;
   display: flex;
   flex-direction: column; row-gap: 6px;
-  height:calc(100vh - 174px);
+  flex-grow: 1;
   padding:6px; 
 }
 #con_up { 
