@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asan</title>
   <link rel="stylesheet" href="css/reset.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/asan.css">
+  <script defer src="js/slick.min.js" ></script>
+  <script defer src="js/main.js"></script>
+
+  
 </head>
 <body>
   <div id="controlbody"></div>
@@ -20,6 +28,10 @@
       </h1>
       <div class="search_btn">
         <a href="#"><img src="img2/search_icon.png" alt="찾기"></a>
+      </div>
+      <div class="search-box">
+        <input type="text" class="search-input" placeholder="검색어를 입력하세요">
+        <button class="search-close-btn">닫기</button>
       </div>
 
     </header>
@@ -99,33 +111,51 @@
         확인 하실 수 있습니다.</p>
         <a href=""><img src="img2/login.png" alt="로그인 버튼"></a>
     </div>
+    
     <ul class="lnb_list">
-      <li>
-        <a href="staff.html">
-          신제품
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          프로모션
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          카메라
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          렌즈
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          액세서리
-        </a>
-      </li>
+      <li class="lnb-item" data-menu="신제품"> <a href="#">신제품</a></li>
+      <li class="lnb-item" data-menu="프로모션"> <a href="#">프로모션</a></li>
+      <li class="lnb-item" data-menu="카메라"> <a href="#">카메라</a></li>
+      <li class="lnb-item" data-menu="렌즈"> <a href="#">렌즈</a></li>
+      <li class="lnb-item" data-menu="액세서리"> <a href="#">액세서리</a></li>
     </ul>
+    
+
+    <div class="submenu" data-menu="신제품">
+      <ul>
+        <li><a href="#">상품1</a></li>
+        <li><a href="#">상품2</a></li>
+      </ul>
+    </div>
+
+    <div class="submenu" data-menu="프로모션">
+      <ul>
+        <li><a href="#">프로모션1</a></li>
+        <li><a href="#">프로모션2</a></li>
+      </ul>
+    </div>
+
+    <div class="submenu" data-menu="카메라">
+      <ul>
+        <li><a href="#">카메라1</a></li>
+        <li><a href="#">카메라2</a></li>
+      </ul>
+    </div>
+
+    <div class="submenu" data-menu="렌즈">
+      <ul>
+        <li><a href="#">렌즈1</a></li>
+        <li><a href="#">렌즈2</a></li>
+      </ul>
+    </div>
+
+    <div class="submenu" data-menu="액세서리">
+      <ul>
+        <li><a href="#">액세서리1</a></li>
+        <li><a href="#">액세서리2</a></li>
+      </ul>
+    </div>
+
     <div class="lnb_res">
       <a href="">
         가까운 매장/서비스센터 찾기

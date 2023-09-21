@@ -14,9 +14,10 @@ header { height:45px; background: white }
   flex-grow: 1;
   padding:6px; 
 }
-#con_up { 
-  flex:2; display: flex; 
-  column-gap: 6px; 
+#con_up {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6px;
 }
 
 .s1-1 { 
@@ -28,12 +29,10 @@ header { height:45px; background: white }
   
 }
 
-.con_up_right {  
-  flex:1; 
-  display: flex; 
-  flex-direction: column ; 
+.con_up_right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   row-gap: 6px;
-  
 }
 
 .s1-2 { flex:1; }
@@ -67,13 +66,51 @@ header { }
   }
   .search_btn { float: right; }
 
+  .search-box {
+    display: none; 
+    position: absolute;
+    top: 45px; 
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .search-input {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .search-close-btn {
+    background-color: #ccc;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+ 
+  .search-box.active {
+    display: block;
+  }
+
 header img { height:45px; }
 
 /* 컨텐츠 */
   #con_wrap {  }
   #con_up {}
   #con_down {}
-  .slider { float: left;;}
+
+  .slider {
+    display: flex;
+    justify-content: center; 
+  }
+  
+  .slider img {
+    max-width: 100%; 
+    height: auto; 
+  }
 
   section { display: table; }
 
@@ -155,12 +192,12 @@ footer { padding:15px 6px; color: white; }
 
   .lnb_login img { width: 232px;  }
 
-  .lnb_list { border-bottom: 1px solid #ddd; font-size: 32px; text-align: center;  }
+  .lnb_list { border-bottom: 1px solid #ddd; font-size: 24px; text-align: center;  }
 
   .lnb_list a {
     display: block; 
-    margin-top: 40px; 
-    margin-bottom: 40px; 
+    margin-top: 30px; 
+    margin-bottom: 30px; 
     
   }
   .lnb_list img { width:274px;  }
@@ -168,8 +205,35 @@ footer { padding:15px 6px; color: white; }
   .lnb_res  { margin-top: 40px;  text-align: center;}
   .lnb_res img  { width:235px; }
 
+
+
   .cover { 
     display: none;
     position: fixed; top: 0; right: 0; bottom: 0; 
     background: rgba(0,0,0,0.7);
   }
+
+
+.submenu {
+  display: none; 
+}
+
+.submenu.active {
+  display: block; 
+}
+
+.submenu ul {
+  padding: 20px 0; 
+}
+
+.submenu li {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.lnb-item.active {
+  font-weight: bold;
+  color: red;
+}
