@@ -1,28 +1,29 @@
-let open = 0; // 메뉴가 닫혀있는 상태
+let open = false;
 
-$('.lnb_btn').click(function(){
-  if(open == 0){
-    $('#lnb').animate({left:0},400);
-    $('#wrap').animate({left:274},400);
+$('.lnb_btn').click(function () {
+  if (!open) {
+    $('#lnb').css('left', '0');
+    $('#wrap').css('left', '274px');
     $(this).find('img').attr({
-    'src':'img2/x_icon.png',
-    'alt':'메뉴닫기'
-    })
+      'src': 'img2/x_icon.png',
+      'alt': '메뉴닫기'
+    });
     $('.cover').fadeIn(400);
-    open = '열려있음';
-  } 
-  else {
-    $('#lnb').animate({left:-274},400);
-    $('#wrap').animate({left:0},400);
+    open = true;
+  } else {
+    $('#lnb').css('left', '-274px');
+    $('#wrap').css('left', '0');
     $(this).find('img').attr({
-    'src':'img2/hamburger_icon.png',
-    'alt':'메뉴열기'
-    })
+      'src': 'img2/hamburger_icon.png',
+      'alt': '메뉴열기'
+    });
     $('.cover').fadeOut(400);
-    open = 0; 
+    open = false;
   }
-    
-})
+});
+
+
+
 
 const searchBtn = document.querySelector('.search_btn');
 const searchBox = document.querySelector('.search-box');
@@ -81,6 +82,9 @@ subMenuItems.forEach((item) => {
     }
   });
 });
+
+
+
 
 
 function animateUnderline(underline) {

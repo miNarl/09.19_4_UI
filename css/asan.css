@@ -67,9 +67,9 @@ header { }
   .search_btn { float: right; }
 
   .search-box {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 45px; 
+    top: 45px;
     right: 0;
     background-color: white;
     border: 1px solid #ccc;
@@ -170,12 +170,29 @@ footer { padding:15px 6px; color: white; }
   .copy { font-size: 10px; margin-top: 15px; }
 
   /* 좌측 슬라이더 메뉴 lnb */
-  #lnb { 
-    position: fixed; top: 0; left: -274px;
-    width: 274px; height: 100%;
-    z-index: 100; background: #f1f1f1;
-    
-    }
+
+
+
+
+  
+  #lnb {
+    position: fixed;
+    top: 0;
+    left: -274px;
+    width: 274px;
+    height: 100%;
+    z-index: 100;
+    background: #f1f1f1;
+    overflow-y: auto; 
+    max-height: 100%; 
+  }
+
+
+
+
+
+
+
 
   .lnb_login {
     background: #111; color: white;
@@ -190,9 +207,13 @@ footer { padding:15px 6px; color: white; }
     
     }
 
-  .lnb_login img { width: 232px;  }
+  .lnb_login img { display: block; margin: 0 auto; width: 100px; }
 
-  .lnb_list { border-bottom: 1px solid #ddd; font-size: 24px; text-align: center;  }
+  .lnb_list { 
+    border-bottom: 1px solid #ddd; 
+    font-size: 24px; 
+    text-align: center; 
+  }
 
   .lnb_list a {
     display: block; 
@@ -214,9 +235,11 @@ footer { padding:15px 6px; color: white; }
   }
 
 
-.submenu {
-  display: none; 
-}
+  .submenu {
+    display: none;
+    overflow-y: auto; /* 스크롤 추가 */
+    max-height: 60vh; /* 화면 높이의 일부만 차지하도록 설정 (조절 가능) */
+  }
 
 .submenu.active {
   display: block; 
