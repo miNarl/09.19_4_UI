@@ -24,21 +24,20 @@ $('.lnb_btn').click(function () {
 
 
 
-
+// 검색버튼 .search_btn 
 const searchBtn = document.querySelector('.search_btn');
 const searchBox = document.querySelector('.search-box');
 const searchCloseBtn = document.querySelector('.search-close-btn');
 searchBtn.addEventListener('click', function() {
   searchBox.classList.add('active');
 });
+// 검색버튼 쪽 닫기 누르면 없어짐 .search_btn 
 searchCloseBtn.addEventListener('click', function() {
   searchBox.classList.remove('active');
 });
 
 
-
-
-
+// lnb 메뉴 서브메뉴 토글
 function toggleSubMenu(menu) {
   const submenu = document.querySelector(`.submenu[data-menu="${menu}"]`);
   if (submenu) {
@@ -48,11 +47,11 @@ function toggleSubMenu(menu) {
         item.classList.remove('active');
       }
     });
-
     submenu.classList.toggle('active');
   }
 }
 
+// lnb 메뉴 .lnb-item 클릭 시 열림
 const lnbItems = document.querySelectorAll('.lnb-item');
 lnbItems.forEach((item) => {
   item.addEventListener('click', (e) => {
@@ -63,6 +62,8 @@ lnbItems.forEach((item) => {
 });
 
 
+
+// .submenu 에 마우스 올리면 언더라인
 const subMenuItems = document.querySelectorAll('.submenu a');
 subMenuItems.forEach((item) => {
   item.addEventListener('mouseenter', () => {
@@ -74,6 +75,7 @@ subMenuItems.forEach((item) => {
     animateUnderline(underline); 
   });
 
+// 마우스 없어지면 언더라인 없어짐
   item.addEventListener('mouseleave', () => {
     item.style.color = ''; 
     const underline = item.querySelector('.underline');
@@ -83,10 +85,7 @@ subMenuItems.forEach((item) => {
   });
 });
 
-
-
-
-
+// 언더라인 효과 함수
 function animateUnderline(underline) {
   const duration = 500; 
   const lineWidth = 100; 
@@ -97,46 +96,17 @@ function animateUnderline(underline) {
   underline.style.bottom = '0'; 
   underline.style.left = '0'; 
 
-
   setTimeout(() => {
     underline.style.width = `${lineWidth}%`;
     underline.style.transition = `width ${duration}ms linear`;
   }, 0);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
 // 메인 비주얼 슬라이더
 
-$(document).ready(function() {
-  $('.slider').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 2000,
-
-  });
+$('.slider').slick({
+  autoplay: true, // 
+  autoplaySpeed: 1000, 
+  arrows: true, 
+  dots: true, 
 });
-*/
