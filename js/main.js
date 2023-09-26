@@ -105,10 +105,8 @@ function animateUnderline(underline) {
 // 메인 비주얼 슬라이더
 
 $('.slider').slick({
-  autoplay: true,
-  autoplaySpeed: 1000,
-  arrows: true,
-  dots: true,
-  infinite: true, 
-
+  autoplay: true, // 
+  autoplaySpeed: 1000, 
+  arrows: true, 
+  dots: true, 
 });

@@ -103,8 +103,6 @@ header img { height:45px; }
 .slider {
   display: flex;
   justify-content: center; 
-  max-width: 100%; 
-  overflow: hidden; 
 }
   
 .slider img {
@@ -266,4 +264,3 @@ ul.quickmenu { display:table; width:100%; color: black;}
   font-weight: bold;
   color: red;
 }
-
